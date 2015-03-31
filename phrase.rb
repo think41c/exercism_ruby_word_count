@@ -1,14 +1,13 @@
 class Phrase
 
+  attr_reader :word_count
+
   def initialize(phrase)
-    @word_count = Hash.new(0)
+    word_count = Hash.new(0)
     @phrase = phrase.split
-    @word_count = { 'word' => 1 }
+    word_count = { 'word' => 1 }
   end
 
-  def word_count
-    @word_count
-  end
 end
 
 ##########
