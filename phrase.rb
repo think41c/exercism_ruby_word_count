@@ -4,10 +4,13 @@ class Phrase
 
   def initialize(phrase)
     @word_count = Hash.new(0)
-    phrase = phrase.gsub(/[!@#$%^&*()-:;]/, '').downcase.split
-    # phrase = phrase.split(',')       # Splits again, splits on ',' 
+    phrase = phrase.gsub("," , " ")
+    phrase = phrase.gsub(/[!@#$%^&*()-:;]/, "").downcase.split
     phrase.each { |word| @word_count[word] += 1 }
     @word_count 
   end
 
 end
+
+puts phrase = Phrase.new('one,two,three')
+
