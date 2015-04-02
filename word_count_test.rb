@@ -47,7 +47,6 @@ class PhraseTest < Minitest::Test
   end
 
   def test_handles_expanded_lists
-    skip
     phrase = Phrase.new("one,\ntwo,\nthree")
     counts = { 'one' => 1, 'two' => 1, 'three' => 1 }
     assert_equal counts, phrase.word_count
@@ -67,7 +66,6 @@ class PhraseTest < Minitest::Test
   end
 
   def test_with_apostrophes
-    skip
     phrase = Phrase.new("First: don't laugh. Then: don't cry.")
     counts = {
       'first' => 1, "don't" => 2, 'laugh' => 1,
