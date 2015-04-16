@@ -8,9 +8,8 @@ class Phrase
   end
 
   def count_words
-    @word_count = @phrase.reduce(Hash.new(0)) do |memo, word|
-      memo[word] += 1 
-      memo
-    end  
+    @word_count = @phrase.each_with_object(Hash.new(0)) do |word, memo|
+    memo[word] += 1
+    end
   end
 end
