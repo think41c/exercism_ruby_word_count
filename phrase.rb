@@ -3,7 +3,7 @@ class Phrase
   attr_reader :word_count
 
   def initialize(phrase)
-    @phrase = phrase.gsub(/[!@#$%^&*():.,]/, " ").downcase.split
+    @phrase = phrase.gsub(/[^\w']/, " ").downcase.split
     count_words
   end
 
