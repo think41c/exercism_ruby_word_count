@@ -4,6 +4,7 @@ class Phrase
 
   def initialize(phrase)
     @phrase = phrase.gsub(/[^\w']/, " ").downcase.split
+    p @phrase
     count_words
   end
 
