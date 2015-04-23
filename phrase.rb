@@ -1,7 +1,5 @@
 class Phrase
 
-  attr_reader :word_count
-
   def initialize(phrase)
     @phrase = phrase.gsub(/[^\w']/, " ").downcase.split
     word_count
