@@ -1,8 +1,7 @@
 class Phrase
 
   def initialize(phrase)
-    @phrase = phrase
-    parse_input
+    @phrase = parse_input(phrase)
   end
 
   def word_count
@@ -13,7 +12,7 @@ class Phrase
 
   private 
 
-  def parse_input
-    @phrase = @phrase.gsub(/[^\w']/, " ").downcase.split    
+  def parse_input(phrase)
+    phrase = phrase.gsub(/[^\w']/, " ").downcase.split    
   end
 end
