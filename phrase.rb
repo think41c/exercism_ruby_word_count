@@ -13,6 +13,6 @@ class Phrase
   private 
 
   def parse_input(phrase)
-    phrase = phrase.gsub(/[^\w']/, " ").downcase.split    
+    phrase.gsub(/[^\w']/, " ").downcase.split    
   end
 end
